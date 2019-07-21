@@ -17,7 +17,7 @@
   </ol>
   <div>
     <ul>
-        <li>ALL</li>
+        <li><a @click="display('All')">ALL</a></li>
         <li>Active</li>
         <li>Complete</li>
     </ul>
@@ -45,6 +45,11 @@ export default {
     },
     handleDelete (index) {
       this.list.splice(index,1)
+    },
+    display (aaa) {
+      if (aaa == "All") {
+        
+      }
     }
   }
 }
