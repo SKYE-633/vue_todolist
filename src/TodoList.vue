@@ -15,6 +15,13 @@
     @delete="handleDelete">
     </todo-item>
   </ol>
+  <div>
+    <ul>
+        <li>ALL</li>
+        <li>Active</li>
+        <li>Complete</li>
+    </ul>
+  </div>
 </div>
 </template>
 
@@ -36,7 +43,7 @@ export default {
       this.list.push(this.inputValue)
       this.inputValue=''
     },
-    handleDelete(index){
+    handleDelete (index) {
       this.list.splice(index,1)
     }
   }

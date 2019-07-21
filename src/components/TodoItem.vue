@@ -1,8 +1,10 @@
 <template>
+<div>
   <li @click="handleDelete">
     <input type="checkbox" v-model="itemIsCompleted" />
     {{content}}
   </li>
+</div>
 </template>
 
 <script>
