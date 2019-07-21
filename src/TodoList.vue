@@ -1,12 +1,12 @@
 <template>
 <div>
   <div>
-    <div>Jquery To Do List</div>
+    <h2>Jquery To Do List</h2>
     <div>Simple Todo List with adding and filter by diff status</div>
     <input v-model="inputValue"/>
     <button @click="handleSubmit">Add</button>
   </div>
-  <ul>
+  <ol>
     <todo-item 
     v-for="(item,index) of list" 
     :key="index"
@@ -14,7 +14,7 @@
     :index="index"
     @delete="handleDelete">
     </todo-item>
-  </ul>
+  </ol>
 </div>
 </template>
 
