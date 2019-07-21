@@ -1,10 +1,18 @@
 <template>
-  <li @click="handleDelete">{{content}}</li>
+  <li @click="handleDelete">
+    <input type="checkbox" v-model="itemIsCompleted" />
+    {{content}}
+  </li>
 </template>
 
 <script>
 export default {
   props: ['content', 'index'],
+  data () {
+    return {
+      itemIsCompleted : ''
+    }
+  },
   methods: {
     handleDelete () {
       this.$emit('delete',this.index)
