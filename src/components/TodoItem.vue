@@ -1,7 +1,8 @@
 <template>
 <div>
-  <li @click="handleDelete">
+  <li @dblclick="edit">
     <input type="checkbox" v-model="itemIsCompleted" />
+    <input v-if="show" @click="handleClick"/>
     {{content}}
   </li>
 </div>
@@ -12,12 +13,16 @@ export default {
   props: ['content', 'index'],
   data () {
     return {
-      itemIsCompleted : ''
+      itemIsCompleted: '',
+      show: false
     }
   },
   methods: {
-    handleDelete () {
-      this.$emit('delete',this.index)
+    handleClick () {
+      this.$emit('delete', this.index)
+    },
+    edit () {
+      this.inputValue=''
     }
   }
 }
@@ -25,6 +30,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 
 </style>
