@@ -1,62 +1,28 @@
 <template>
-<div>
-  <div>
-    <h2>Jquery To Do List</h2>
-    <div>Simple Todo List with adding and filter by diff status</div>
-    <input v-model = "inputValue"/>
-    <button @click = "handleSubmit">Add</button>
-  </div>
-  <ol>
-    <todo-item 
-    v-for = "(item, index) of list"  
-    :key = "index"
-    :content = "item"
-    :index = "index"
-    @delete = "handleDelete">
-    </todo-item>
-  </ol>
-  <div>
-    <button @click="showAll">ALL</button>
-    <button @click="nothing">Active</button>
-    <button @click="allCompleted">Complete</button>
-  </div>
+<div id="app">
+  <Header></Header>
+  <Items></Items>
+  <List></List>
+  <Footer></Footer>
 </div>
 </template>
 
 <script>
-import TodoItem from './components/TodoItem'
-
+import Header from './components/Header.vue';
+import Items from './components/Items.vue';
+import List from './components/List.vue';
+import Footer from './components/Footer.vue';
 export default {
+  name:"app",
   components: {
-    'todo-item': TodoItem
-  },
-  data () {
-    return {
-      inputValue: '',
-      list: []
-    }
-  },
-  methods: {
-    handleSubmit () {
-      this.list.push(this.inputValue)
-      this.inputValue = ''
-    },
-    handleDelete (index) {
-      this.list.splice(index, 1)
-    },
-    showAll () {
-
-    },
-    nothing () {
-      this.list=''
-    },
-    allCompleted () {
-
-    }
+    Header,
+    Items,
+    List,
+    Footer
   }
 }
 </script>
 
 <style>
-
+@import url("./css/TodoList.css");
 </style>
