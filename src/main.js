@@ -4,7 +4,7 @@ import Vue from 'vue'
 import TodoList from './TodoList.vue'
 import Vuex from 'vuex'
 
-Vue.Vue(Vuex)
+Vue.use(Vuex)
 Vue.config.productionTip = false
 
 const store = new Vuex.Store({
@@ -42,6 +42,6 @@ const store = new Vuex.Store({
 /* eslint-disable no-new */
 new Vue({
       store,
-      render: h => h(App),
+      render: h => h(TodoList),
 }).$mount('#app')
     

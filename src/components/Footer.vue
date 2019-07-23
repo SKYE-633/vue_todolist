@@ -1,10 +1,10 @@
 <template>
     <div>
-        <ul id="filters">
-      <li><a href="#" @click="display('All')">ALL</a></li>
-      <li><a href="#" @click="display('Actived')">Active</a></li>
-      <li><a href="#" @click="display('Completed')">Complete</a></li>
-    </ul>
+      <div id="filters">
+        <li><a href="#" @click="display('All')">ALL</a></li>
+        <li><a href="#" @click="display('Actived')">Active</a></li>
+        <li><a href="#" @click="display('Completed')">Complete</a></li>
+    </div>
     </div>
 </template>
 <script>
