@@ -19,6 +19,9 @@ export default {
     Items,
     List,
     Footer
+  }，
+  mounted() {
+    this.$store.dispatch("getList");
   }
 }
 </script>
