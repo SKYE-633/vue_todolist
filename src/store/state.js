@@ -1,6 +1,4 @@
-export default {
-    state: {
-        items: [],
-        toDisplayItems: [],
-    }
+export const state = {
+    items: [],
+    toDisplayItems: []
 }
